@@ -1,0 +1,55 @@
+<apex:page extensions="AppraisalLetterController" standardController="Appraisal_Letter__c" renderAs="pdf" >
+    <div class="post-description">
+    <apex:image value="{!URLFOR($Resource.webSfdcLogo)}" style="font-size: -5px;height: 56px;margin-left: 27px;margin-top: 19px;"/>
+        
+        <p style="float:right;">  {!$label.Office_address}<br/>Zirakpur, Gazipur, Punjab<br/>Email: <a href="url">info@websfdctech.co.in</a><br/>Web: <a href="url">https://websfdc.in/ </a> </p>
+        <br/> <br/> <br/> <br/>
+        
+        <p style="margin-left: 500px; font-style:italic; text-decoration: underline;">    Date: {!strDate} 	</p>
+        <p >   
+            To,<br/>
+            {!reList.amrik__Candidate_Name__r.amrik__Salutation__c}. {!reList.amrik__Candidate_Name__r.name}<br/>
+            {!reList.amrik__Candidate_Name__r.amrik__Relation__c}: Mr.{!reList.amrik__Candidate_Name__r.amrik__Father_Name__c} <br/>
+            {!reList.amrik__Candidate_Name__r.amrik__Landmark_place__c}<br/>
+            {!reList.amrik__Candidate_Name__r.amrik__City_and_state__c}<br/>
+            Pin Code: {!reList.amrik__Candidate_Name__r.amrik__Postal_Code__c}.
+        </p>
+        <p>Dear {!reList.amrik__Candidate_Name__r.name},</p>
+        
+        <p style="font-weight: bold">Subject: Appraisal Letter</p>
+        
+        <p>This year has been eventful and challenging for all of us in Websfdc Technology. We have met the huge challenge of scaling up our business and growing our bottom line.</p>
+        
+        <p>Your performance during this period has been rated as exceeds expectations. We hope that you continue to meet all challenges that we will offer you in the coming year.</p>
+        
+        <p>We are delighted to inform you that based on your last one year performance your annual salary has been appraised from Rs.{!appraisalFrom} to {!appraisalTo} and will be implemented from {!reList.amrik__Month_and_year__c}.</p>
+        
+        <p>Congratulations on meriting this reward.</p>
+        
+        
+        <p style="color: blue; padding-top: 20px; font-style: italic;"><strong>Best Regards,</strong></p>
+        
+        <p style="color: blue; font-style: italic;"> <strong>Manju Chowdhury </strong></p>
+        <p> <strong>info@websfdctech.co.in</strong>	</p>
+        
+        <p style="color: gray;"> <strong>Manager – Human Resource</strong></p>
+        <apex:image value="{!URLFOR($Resource.webSfdcLogo)}"/>
+        <div  style="position: absolute; bottom: 100px; left: 600px;">
+            <apex:image value="{!URLFOR($Resource.webSfdcStamp)}" style="height: 55px;"/>
+            <p>
+                (Director)
+            </p>
+            <p>
+                Rakesh Kumar
+            </p>
+        </div>
+        <div>
+            <hr/>
+            <p style="text-align: center">
+                  {!$Label.amrik__Office_address}, Zirakpur, Gazipur, Punjab ,Mobile : +91-70155 48507 Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdc.in/</a>
+            </p>
+        </div>
+        
+        
+    </div>
+</apex:page>

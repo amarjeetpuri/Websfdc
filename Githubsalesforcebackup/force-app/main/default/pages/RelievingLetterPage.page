@@ -1,0 +1,45 @@
+<apex:page extensions="RelievingLetterController" standardController="Relieving_Letter__c" renderAs="pdf" lightningStylesheets="true" >
+    <div class="post-description" style="padding: 0px 30px 0px 30px; displpay: inline-block">
+        <apex:image value="{!URLFOR($Resource.webSfdcLogo)}" style="font-size: -5px;height: 56px;margin-left: 27px;margin-top: 19px;"/>
+        <div style="margin-top: 50px">	
+            
+            <span>Dear {!reList.amrik__Candidate_Name__r.name},</span>
+            <span style="float:right; font-weight: bold;">{!lastWorkingDay}</span>
+            
+        </div>
+        
+        <p><span style="font-weight: bold">Subject: </span>Relieving Letter</p>
+        <p>This is to acknowledge the receipt of your resignation letter dated <strong>{!lastWorkingDay}</strong></p>
+        
+        <p style="padding-top: 20px">While accepting the same, we thank you very much for the close association you had with us during the tenure from <strong>{!joiningDate}</strong> to <strong>{!lastWorkingDay}</strong></p>
+        
+        <p style="padding-top: 20px">You have been relieved from your service with effect from the closing working hours of <strong>{!lastWorkingDay}</strong></p>
+        
+        <p style="padding-top: 20px">We wish you all the best in your future career.</p>
+        
+        
+        <p style="padding-top: 20px">Yours Sincerely,</p>
+        
+        <p style="color:blue">Best Regards,</p>
+        <p style="color:blue">Neha Sharma</p>
+        <p style="color:grey">Manager – Human Resource</p>
+        <apex:image value="{!URLFOR($Resource.webSfdcLogo)}" />
+        <!--  <apex:image value="{!URLFOR($Resource.webSfdcStamp)}" style="height: 90px;margin-left: 200px;" /> --> 
+        <div  style="position: absolute; bottom: 110px; left: 600px;">
+            <apex:image value="{!URLFOR($Resource.webSfdcStamp)}" style="height: 55px;"/>
+            <p>
+                (Director)
+            </p>
+            <p>
+                Rakesh Kumar
+            </p>
+        </div>
+        
+        <div style="padding-top:30px">
+            
+            
+            <hr/>
+            <p style="padding: 0px 40px 0px 40px"> {!$Label.amrik__Office_address}, Zirakpur, Gazipur, Punjab ,Mobile : +91-70155 48507 Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdc.in/</a></p>
+        </div>
+    </div>
+</apex:page>

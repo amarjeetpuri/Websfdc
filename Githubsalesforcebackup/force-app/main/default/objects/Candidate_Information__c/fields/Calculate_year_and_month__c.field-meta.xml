@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculate_year_and_month__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Today()&lt;Date_Of_Joining__c , &quot;Check the Date!&quot;,
+
+TEXT(IF(YEAR(Today())=YEAR(Date_Of_Joining__c ),0,IF(YEAR(Today())-YEAR(Date_Of_Joining__c )=1,IF(MONTH(Today())=MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),0,1),IF(MONTH(Today())&lt;MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),1,0),1)),IF(MONTH(Today())-MONTH(Date_Of_Joining__c )&lt;0,YEAR(Today())-YEAR(Date_Of_Joining__c )-1,IF(MONTH(Today())=MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),YEAR(Today())-YEAR(Date_Of_Joining__c )-1,YEAR(Today())-YEAR(Date_Of_Joining__c )),YEAR(Today())-YEAR(Date_Of_Joining__c )))))) &amp; &quot; year(s), &quot; &amp;
+
+TEXT(IF(YEAR(Today())=YEAR(Date_Of_Joining__c ),IF(MONTH(Today())=MONTH(Date_Of_Joining__c ),0,IF(MONTH(Today())&gt;MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),MONTH(Today())-MONTH(Date_Of_Joining__c )-1,MONTH(Today())-MONTH(Date_Of_Joining__c )),0)),IF(MONTH(Today())=MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),11,0),IF(MONTH(Today())&gt;MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),MONTH(Today())-MONTH(Date_Of_Joining__c )-1,MONTH(Today())-MONTH(Date_Of_Joining__c )),IF(MONTH(Today())&lt;MONTH(Date_Of_Joining__c ),IF(DAY(Today())&lt;DAY(Date_Of_Joining__c ),11-(MONTH(Date_Of_Joining__c )-MONTH(Today())),12-(MONTH(Date_Of_Joining__c )-MONTH(Today()))),12-(MONTH(Date_Of_Joining__c )-MONTH(Today()))))))) &amp; &quot; month(s)&quot;
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Calculate year and month</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

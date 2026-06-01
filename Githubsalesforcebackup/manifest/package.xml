@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+    <!-- Apex Classes -->
+    <types>
+        <members>ExperienceLetterController</members>
+        <members>RelievingLetterController</members>
+        <members>PaySlipController</members>
+        <members>OfferLetterController</members>
+        <name>ApexClass</name>
+    </types>
+
+    <!-- Visualforce Pages -->
+    <types>
+        <members>ExperienceLetterPage</members>
+        <members>RelievingLetterPage</members>
+        <members>PaySlipPage</members>
+        <members>OfferLetter</members>
+        <members>AppraisalLetterPage2</members>
+        <members>InternshipCertificateVF</members>
+        <name>ApexPage</name>
+    </types>
+
+    <types>
+        <members>Appraisal_Letter__c</members>
+        <members>Candidate_Information__c</members>
+        <members>Salary_Slip__c</members>
+        <members>Relieving_Letter__c</members>
+        <members>Training_Program__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <!-- Layouts -->
+    <types>
+        <members>Appraisal_Letter__c-*</members>
+        <members>Candidate_Information__c-*</members>
+        <members>Salary_Slip__c-*</members>
+        <members>Relieving_Letter__c-*</members>
+        <members>Training_Program__c-*</members>
+        <name>Layout</name>
+    </types>
+
+    <!-- Custom Tabs -->
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+
+
+
+    <!-- Static Resources -->
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
+
+
+    <!-- Custom Labels -->
+    <types>
+        <members>*</members>
+        <name>CustomLabel</name>
+    </types>
+
+    <version>65.0</version>
+
+</Package>

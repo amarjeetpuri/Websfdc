@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculate_Max_Appraisal__c</fullName>
+    <label>Calculate Max Appraisal</label>
+    <summarizedField>Appraisal_Letter__c.Appraisal_To__c</summarizedField>
+    <summaryForeignKey>Appraisal_Letter__c.Candidate_Name__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <type>Summary</type>
+</CustomField>

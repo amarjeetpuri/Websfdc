@@ -1,0 +1,205 @@
+<apex:page controller="AccountDetailPDFController"
+           renderAs="pdf"
+           showHeader="false"
+           sidebar="false"
+           applyHtmlTag="false"
+           
+           applyBodyTag="false">
+    
+    <html>
+        <head>
+            <style>
+                body {
+                font-family: "Times New Roman", serif;
+                font-size: 10pt;
+                color: #000;
+                }
+                
+                table {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed;
+                }
+                
+                th, td {
+                border: 1px solid #000;
+                padding: 6px;
+                text-align: center;
+                word-wrap: break-word;
+                }
+                
+                th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+                }
+                
+                .header-table td {
+                border: none;
+                vertical-align: top;
+                }
+                
+                .company-name {
+                font-size: 14pt;
+                font-weight: bold;
+                }
+                
+                .sub-text {
+                font-size: 9pt;
+                }
+                
+                .divider {
+                margin: 10px 0;
+                border-bottom: 2px solid #000;
+                }
+                
+                .title {
+                text-align: center;
+                font-size: 12pt;
+                font-weight: bold;
+                margin-bottom: 8px;
+                }
+                
+                .footer {
+                margin-top: 15px;
+                font-size: 8pt;
+                text-align: center;
+                border-top: 1px solid #000;
+                padding-top: 5px;
+                }
+                
+                .no-break {
+                page-break-inside: avoid;
+                }
+            </style>
+        </head>
+        
+        <body>
+            
+            <!-- HEADER -->
+            <table class="header-table">
+                <tr>
+                    <td style="width:30%;">
+                        <img src="{!URLFOR($Resource.WebSFDC_Logo)}" width="120"/>
+                    </td>
+                    <td style="width:70%;">
+                        <div class="company-name">WEBSFDC TECHNOLOGY PRIVATE LIMITED</div>
+                        <div class="sub-text">
+                            CIN: U74999HR2022PTC101066<br/>
+                            {!$label.Office_address}, Zirakpur, Gazipur, Punjab – 140603<br/>
+                            Email: info@websfdctech.co.in | Website: www.websfdc.in<br/>
+                            Directors: Amarjeet, Manju
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="divider"></div>
+            
+            <!-- TITLE -->
+            <div class="title">Account Details</div>
+            
+            <!-- DATA TABLE -->
+            <table class="no-break">
+                <thead>
+                    <tr>
+                        <th style="width:6%;">S.No.</th>
+                        <th style="width:16%;">Account Holder</th>
+                        <th style="width:18%;">Account Number</th>
+                        <th style="width:16%;">IFSC Code</th>
+                        <th style="width:18%;">Bank Name</th>
+                        <th style="width:18%;">Bank Address</th>
+                        <th style="width:14%;">PAN Card No.</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <apex:repeat value="{!accountDetails}" var="wrap">
+                        <tr>
+                            <td>{!wrap.serialNo}</td>
+                            <td>{!wrap.acc.Account_Holder_Name__c}</td>
+                            <td>{!wrap.acc.Account_Number__c}</td>
+                            <td>{!wrap.acc.IFSC_Code__c}</td>
+                            <td>{!wrap.acc.Bank_Name__c}</td>
+                            <td>{!wrap.acc.Bank_address__c}</td>
+                            <td>{!wrap.acc.Pan_Card_Number__c}</td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+            </table>
+            <br/><br/>
+            
+            <div class="title">Client Project: {!employeeSalaryList[0].salary.amrik__Client_Project__r.Name}</div>
+            
+            <table class="no-break">
+                <thead>
+                    <tr>
+                        <th style="width:5%;">S.No.</th>
+                        <th style="width:15%;">Month Days</th>
+                        <th style="width:15%;">Working Days</th>
+                        <th style="width:35%;">Employee Name</th>
+                        <th style="width:30%;">Client Final Payment</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <apex:repeat value="{!employeeSalaryList}" var="wrap">
+                        <tr>
+                            <td>{!wrap.serialNo}</td>
+                            <td>{!wrap.salary.amrik__Month_days__c}</td>
+                            <td>{!wrap.salary.amrik__Working_days__c}</td>
+                            <td>{!wrap.salary.Name}</td>
+                            <td>
+                                INR&nbsp;
+                                <apex:outputText value="{0,number,###,###,##0.00}">
+                                    <apex:param value="{!wrap.salary.Client_Final_Payment__c}" />
+                                </apex:outputText>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                </tbody>
+                
+                <!-- GRAND TOTAL -->
+                <tfoot>
+                    <!-- GRAND TOTAL -->
+                    <tr>
+                        <th colspan="4" style="text-align:right;">Grand Total</th>
+                        <th>
+                            INR&nbsp;
+                            <apex:outputText value="{0,number,###,###,##0.00}">
+                                <apex:param value="{!totalClientFinalPayment}" />
+                            </apex:outputText>
+                        </th>
+                    </tr>
+                    
+                    <!-- ALREADY PAID -->
+                    <tr>
+                        <th colspan="4" style="text-align:right;">Already Paid Amount</th>
+                        <th>
+                            INR&nbsp;
+                            <apex:outputText value="{0,number,###,###,##0.00}">
+                                <apex:param value="{!alreadyPaidAmount}" />
+                            </apex:outputText>
+                        </th>
+                    </tr>
+                    
+                    <!-- REMAINING AMOUNT -->
+                    <tr>
+                        <th colspan="4" style="text-align:right;">Remaining Amount</th>
+                        <th>
+                            INR&nbsp;
+                            <apex:outputText value="{0,number,###,###,##0.00}">
+                                <apex:param value="{!remainingAmount}" />
+                            </apex:outputText>
+                        </th>
+                    </tr>
+                </tfoot> </table>
+            
+            <!-- FOOTER -->
+            <div class="footer">
+                This document is system generated and confidential.<br/>
+                © WEBSFDC Technology Private Limited
+            </div>
+            
+        </body>
+    </html>
+</apex:page>
