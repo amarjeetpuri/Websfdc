@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OfferRel_Date_Earlier_than_OfferAccp</fullName>
+    <active>false</active>
+    <description>Offer release date should be earlier than the offer acceptance date &amp; joining date.</description>
+    <errorConditionFormula>OR((Offer_Release_Date__c  &gt; Offer_Acceptance_Date__c ),( Offer_Release_Date__c  &lt;  Date_Of_Joining__c ),(Offer_Acceptance_Date__c &gt; Date_Of_Joining__c))</errorConditionFormula>
+    <errorMessage>Offer release date should be earlier than the offer acceptance date &amp; joining date.</errorMessage>
+</ValidationRule>

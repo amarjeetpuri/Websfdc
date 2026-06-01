@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_Allowance__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Effective_Working_Days__c ) , IF( !ISBLANK(Appraisal_Letter__c), (Appraisal_Letter__r.Appraisal_To__c*4)/1200, (Candidate_Name__r.Total_CTC__c*4)/1200)
+, IF( !ISBLANK(Appraisal_Letter__c),( (Appraisal_Letter__r.Appraisal_To__c*4)/1200)/ Month_Days__c * Effective_Working_Days__c , ((Candidate_Name__r.Total_CTC__c*4)/1200))/ Month_Days__c * Effective_Working_Days__c)</formula>
+    <label>Mobile Allowance</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Basic__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( Effective_Working_Days__c ) , IF( !ISBLANK(Appraisal_Letter__c), (Appraisal_Letter__r.Appraisal_To__c*50)/1200,  Candidate_Name__r.Basic__c /12)
+, IF( !ISBLANK(Appraisal_Letter__c),( (Appraisal_Letter__r.Appraisal_To__c*49.594)/1200)/ Month_Days__c  *  Effective_Working_Days__c , (Candidate_Name__r.Basic__c/12))/ Month_Days__c  *  Effective_Working_Days__c)</formula>
+    <label>Basic</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,414 @@
+<apex:page standardController="Candidate_Information__c" extensions="OfferLetterController" renderAs="pdf"   applyBodyTag="false">
+    <apex:image value="{!URLFOR($Resource.WEBSFDCNewLogo)}" style="margin-left: 27px;margin-top: 19px;" />
+    <p style="position:absolute; right:50px;">  {!$label.Office_address},<br/>Zirakpur (Punjab),140603<br/>Email: <a href="url">info@websfdctech.co.in</a><br/>Web: <a href="url">https://websfdc.in/</a> </p>
+    <br/> <br/> <br/> 
+    <p style="position:absolute; top:100px; right:50px; text-decoration:underline;"><br/> Date:{!OffreleDate}</p>
+    
+    <div >
+        
+        <p style="color:blue">Dear {!reList.Name} </p>
+        <p>It was our pleasure to talk to you and thank you for the participation in our selection process. We are
+            pleased to offer you ‘<strong>{!reList.amrik__Candidate_Position__c}</strong>’ position at our Zirakpur office</p>
+        <span style="color:blue">This offer is subject to the following –</span>
+        <ul>
+            <li style="padding:8px">You would accept the offer and confirm the joining date by <span style="color:blue">{!OfferAcceptanceDate} </span> </li>
+            <li style="padding:8px">Your date of joining is on <span style="color:blue">{!joiningDate}</span> and reporting time is <span style="color:blue">10:00 AM </span> </li>
+            <li style="padding:8px">This offer stands valid if you are able to join on the joining date mentioned above, otherwise
+                it will be considered null and void. </li>
+            <li style="padding:8px">Your Annual CTC is <span style="color:blue">{!totalCTCFormat } </span> only. </li>
+        </ul>
+        <span>On the Joining date you need to provide us: </span>
+        <ul>
+            <li style="padding:8px">Copy of your Appointment letter </li>
+            <li style="padding:8px">Copy of your Relieving/Resignation letter of all last organizations (if applicable) </li>
+            <li style="padding:8px">Copy of Experience Letter(s) from all your past employers (if applicable)</li>
+            <li style="padding:8px">Your UAN number for PF </li>
+            <li style="padding:8px">Copy of all your Educational Certificates (Marks sheets and passing certificates) </li>
+            <li style="padding:8px">Copy of all your Technical / Non-Technical certificates, if any </li>
+            <li style="padding:8px">Print copy of your <span style="color:blue">NSR e-card</span>. (National Skills Registry)</li>
+            <li style="padding:8px">Copy of your <span style="color:blue">Date of Birth Certificate</span>. </li>
+            <div>
+                <hr/>
+                <p style="text-align: center">
+                    {!$label.Office_address}, Zirakpur, Gazipur, Punjab, Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdc.in/</a>
+                    <br/>   CIN: U74999HR2022PTC101066
+                </p>
+            </div>
+            <li style="padding:8px">Five (5) <span style="color:blue">passport sized photograph</span> with name and blood group mentioned at the back of the snap </li>
+            <li style="padding:8px">Copy of <span style="color:blue">Residential addresses proof</span> (Current and Permanent in form of ration card, voter ID card License copy etc.) </li>
+        </ul>
+        
+        <p style="line-height:20px; padding-top:10px;">
+            Kindly bring all the <span style="color:blue">Originals for verification</span> of the above. This offer stands valid once you send us
+            across your acceptance. On first day of joining <span style="color:blue">Lunch</span> shall be provided by the company.
+            WebSfdc Technology is an Employee concerned organization. We consider you all as our assets
+            and believe in bringing diverse and highly qualified individuals on board to ensure a work culture
+            that fosters personal growth. 
+        </p>
+        <p style="line-height:20px">
+            We nurture a company culture of helping our clients beyond expectations in order to achieve
+            various business goals. Our organization values revolve around customer satisfaction, quality
+            delivery, privacy protection, integrity and equal opportunity rights. 
+        </p>
+        <p style="line-height:20px">
+            Websfdc Technology is a growing organization and provides a good growing environment to our
+            employees. Hence we offer you an Annual Package of Rs. {!totalCTCFormat } as your remuneration with an
+            employment agreement of 1 year, and provide a platform were you can learn, grow and revert your
+            contribution to the organization. 
+        </p>
+        <p style="line-height:20px">
+            * According to the law, an organization has to pay gratuity to an employee who has served it
+            continuously for at least 5 years
+            
+        </p>
+        <p style="line-height:20px">
+            Eligibility for reimbursement: Prior approval from the manager and successful certification are
+            required. You need to serve the organization for at least a year from the date of the certification, failure
+            to which will lead to the recovery of the certification amount during the FNF settlement. 
+        </p>
+        <p style="line-height:20px">
+            *** Medical Insurance family floater: Self + Spouse + 3 Dependent Children (up to 25 age) + 2 Parents
+            as per the company norms which is at Present 5 Lac. To include Parents, there is a nominal monthly
+            contribution of Rs. 1000 for single parent and Rs. 1250 for both Parents which will be deducted from
+            your salary every month. The contribution made for parents nomination in the policy can be considered
+            in your tax saving under Section 80D. 
+        </p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div>
+            <hr/>
+            <p style="text-align: center">
+                {!$label.Office_address}, Zirakpur, Gazipur, Punjab, Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdc.in/</a>
+                <br/>   CIN: U74999HR2022PTC101066
+            </p>
+        </div>
+        <br/><br/><br/><br/>
+        
+        
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            <tbody >
+                <tr style="line-height: 30px; ">
+                    
+                    <td style=" font-weight: bold; text-align: center;">
+                        Salary Annexure
+                        
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            
+            <tbody >
+                
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Employee Name:
+                    </td>
+                    
+                    <td style="font-weight:bold;padding-left:15px;">
+                        {!reList.Name}
+                    </td>
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Date of Joining
+                    </td>
+                    
+                    <td style="font-weight:bold;padding-left:15px;">
+                        {!joiningDate}
+                    </td>
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Designation:
+                    </td>
+                    
+                    <td style="font-weight:bold;padding-left:15px;">
+                        {!reList.amrik__Candidate_Position__c}
+                    </td>
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Shift Time:
+                    </td>
+                    
+                    <td style="font-weight:bold;padding-left:15px;">
+                        India Shift (10:00 AM to 07:00 PM )IST
+                    </td>
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Location:
+                    </td>
+                    
+                    <td style="font-weight:bold;padding-left:15px;">
+                        {!$label.Office_address}, Zirakpur
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            
+            <tbody >
+                
+                <tr style="line-height: 30px; ">
+                    <td style=" font-weight:bold;padding-left:5px;">
+                        Components
+                    </td>
+                    <td style=" font-weight:bold;">
+                        Monthly
+                    </td>
+                    
+                    <td style=" font-weight:bold;">
+                        Annual
+                    </td>
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td  width="60%"  style="padding-left:5px;">
+                        Basic
+                    </td>
+                    <td width="25%" >
+                        {!Basic}
+                    </td>
+                    <td  width="15%" >
+                        {!BasicAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;padding-left:5px;">
+                        H R A
+                    </td>
+                    <td style="width:151px;">
+                        {!hra}
+                    </td>
+                    <td style="width:166px;">
+                        {!hraAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;padding-left:5px;">
+                        Uniform All
+                    </td>
+                    <td style="width:151px;">
+                        {!UniformAll}
+                    </td>
+                    <td style="width:166px;">
+                        {!UniformAllAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        Food All
+                    </td>
+                    <td style="width:151px;">
+                        {!FoodAll}
+                    </td>
+                    <td style="width:166px;">
+                        {!FoodAllAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        Medical Allowance
+                        
+                    </td>
+                    <td style="width:151px;">
+                        {!MedicalAllowance}
+                    </td>
+                    <td style="width:166px;">
+                        {!MedicalAllowanceAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        LTA
+                    </td>
+                    <td style="width:151px;">
+                        {!TravelAllowance}
+                    </td>
+                    <td style="width:166px;">
+                        {!TravelAllowanceAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;font-weight:bold;padding-left:5px;">
+                        GROSS (A)
+                    </td>
+                    <td style="width:151px;font-weight:bold;">
+                        {!totalGrossMonthly}
+                    </td>
+                    <td style="width:166px;font-weight:bold">
+                        {!totalGrossAnnual}
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            
+            <td style=" font-weight: bold; text-align: center;">
+                Additional <br/>
+                Benefits
+                
+            </td>
+        </table>
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            
+            <tbody >
+                
+                <tr style="line-height: 30px; ">
+                    <td  width="60%"  style="padding-left:5px;">
+                        Gratuity (4.81%) * 
+                    </td>
+                    <td width="25%" >
+                        
+                        {!gratuityAmount}
+                    </td>
+                    <td  width="15%" >
+                        {!gratuityAmountAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;padding-left:5px;">
+                        Training and Certification ** 
+                    </td>
+                    <td style="width:151px;">
+                        <!--{!trainingAmountMonthly}-->
+                    </td>
+                    <td style="width:166px;">
+                        {!trainingAmountAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        Medical Insurance ***
+                    </td>
+                    <td style="width:151px;">
+                    </td>
+                    <td style="width:166px;">
+                        {!medicalInsurenceAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        LIC Insurance ****
+                        
+                    </td>
+                    <td style="width:151px;">
+                    </td>
+                    <td style="width:166px;">
+                        {!licAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px; padding-left:5px;">
+                        Performance Bonus *****
+                    </td>
+                    <td style="width:151px;">
+                    </td>
+                    <td style="width:166px;">
+                        {!performanceAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;font-weight:bold;padding-left:5px;">
+                        Total Contribution (B)
+                    </td>
+                    <td style="width:151px;font-weight:bold;">
+                        {!gratuityAmount}
+                    </td>
+                     <td style="width:166px;font-weight:bold;">
+                        {!totalContributionAnnual}
+                    </td>
+                    
+                </tr>
+                <tr style="line-height: 30px; ">
+                    <td style="width:186px;font-weight:bold;padding-left:5px;">
+                        Base CTC
+                    </td>
+                    <td style="width:151px;font-weight:bold;">
+                        {!monthlySalary}
+                    </td>
+                    <td style="width:166px;font-weight:bold;">
+                        {!totalCTCFormat }
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        <table border="1" cellpadding="0" cellspacing="0" width="700" >
+            <tr >
+                
+                <td >
+                    <b>  # We work in multiple shifts (GEN/UK/AUS). Hours and time of work can be modified in case of specific
+                        groupand/or project requirement from time to time</b>
+                </td>
+            </tr>
+        </table>
+        <br/>
+        <div>
+            <hr/>
+            <p style="text-align: center">
+                {!$label.Office_address}, Zirakpur, Punjab, India, Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdctech.co.in</a>
+                <br/>   CIN: U74999HR2022PTC101066
+            </p>
+        </div><br/><br/>
+        <div >
+            <p style="line-height:20px">
+                *  The management on the basis of performance and the ability to discharge the assigned duties will
+                accord increments as per Company policies.
+                
+            </p>
+            <p style="line-height:20px">
+                You will be on probation for an initial period of six months. The probation
+                period is extendable by the sole discretion of the company by one or more terms of three months. After completion
+                of the probation period till such time you are intimated in writing regarding your confirmations you shall continue
+                remain on probation. Upon satisfactory completion of the probation period you will be confirmed by the company
+                with a confirmation letter.
+                
+            </p>
+            
+            <span>Your Remuneration would be governed by the following clauses: </span>
+            <ul>
+                <li style="padding:5px">Medical Insurance Coverage will be of Rs. 1 lac /Annum and Medical Insurance premium may raise yearly and would be deducted as per insurance policy.</li>
+                <li style="padding:5px">Taxes will be applicable as per government rules.</li>
+                <li style="padding:5px"><span style="color:blue">**</span> If any declaration given or furnished by you to the company in any document submitted for employment proves to be false or if you have wilfully suppressed any material information, you will be liable to be terminated without notice. </li>
+            </ul>
+            <p> Kindly take this as a formal channel of communicating the offer. You can sign the further documents of your employment on your joining day.</p>
+            <p>We look forward to having you an integral part of our company.</p>
+            
+            <p style="color:blue">Best Regards,</p>
+            <p style="color:blue">{!Candidate_Information__c.amrik__HR_Name__c}</p>
+            <p style="color:grey">Manager – Human Resource</p>
+            <apex:image value="{!URLFOR($Resource.WEBSFDCNewLogo)}" style="font-size: -5px;height: 56px;margin-left: 27px;margin-top: 19px;" />
+            <!--  <apex:image value="{!URLFOR($Resource.webSfdcStamp)}" style="height: 90px;margin-left: 200px;" /> --> 
+            <div  style="position: absolute; bottom: 100px; left: 600px;">
+                <apex:image value="{!URLFOR($Resource.webSfdcStamp)}" style="height: 55px;"/>
+                <p>
+                    (Director)
+                </p>
+                <p>
+                    Rakesh Kumar
+                </p>
+            </div><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <div>
+                <hr/>
+                <p style="text-align: center">
+                    {!$Label.amrik__Office_address}, Zirakpur, Punjab, India, Email : <a href="">info@websfdctech.co.in</a>, Web: <a href="">https://websfdctech.co.in</a>
+                    <br/>   CIN: U74999HR2022PTC101066
+                </p>
+            </div>
+        </div>
+    </div>
+</apex:page>

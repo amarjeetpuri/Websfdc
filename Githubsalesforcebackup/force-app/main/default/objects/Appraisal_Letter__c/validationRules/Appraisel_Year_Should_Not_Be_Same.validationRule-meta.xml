@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Appraisel_Year_Should_Not_Be_Same</fullName>
+    <active>false</active>
+    <description>Appraisel_Year_Should_Not_Be_Same</description>
+    <errorConditionFormula>AND(
+  ISCLONE(),
+  ISNEW(),  YEAR( Appraisal_date__c)  =  YEAR( TODAY()) 
+)</errorConditionFormula>
+    <errorMessage>Year should not be same for the Appraisal date</errorMessage>
+</ValidationRule>

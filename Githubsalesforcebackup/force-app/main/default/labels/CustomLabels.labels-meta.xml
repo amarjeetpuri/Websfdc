@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_Rating_error_message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Account Rating error message</shortDescription>
+        <value>please enter the correct  the rating details before saving the record</value>
+    </labels>
+    <labels>
+        <fullName>Country_Bypass</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Country Bypass</shortDescription>
+        <value>US</value>
+    </labels>
+    <labels>
+        <fullName>Office_address</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Office address</shortDescription>
+        <value>Office 219–220, 2nd Floor, Global Business Park</value>
+    </labels>
+    <labels>
+        <fullName>password</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>password</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>username</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>username</shortDescription>
+        <value>amarjeet123</value>
+    </labels>
+</CustomLabels>
